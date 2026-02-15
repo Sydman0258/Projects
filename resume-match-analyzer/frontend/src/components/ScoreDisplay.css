@@ -1,0 +1,280 @@
+.score-display {
+  padding: 2rem 0;
+}
+
+.score-header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.score-header h2 {
+  font-size: 2rem;
+  color: #333;
+  margin: 0;
+}
+
+/* Overall Section */
+.overall-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  margin-bottom: 3rem;
+  padding: 2rem;
+  background: linear-gradient(135deg, #f8f9ff 0%, #fff 100%);
+  border-radius: 16px;
+}
+
+.circular-score {
+  position: relative;
+  width: 180px;
+  height: 180px;
+}
+
+.score-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.score-number {
+  font-size: 2.5rem;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.score-label {
+  font-size: 0.9rem;
+  color: #666;
+  margin-top: 0.25rem;
+}
+
+.recommendation {
+  text-align: center;
+  padding: 1.5rem;
+  border-left: 4px solid;
+  background: white;
+  border-radius: 8px;
+  max-width: 500px;
+}
+
+.recommendation h3 {
+  margin: 0 0 0.5rem 0;
+  font-size: 1.3rem;
+}
+
+.recommendation p {
+  margin: 0;
+  color: #666;
+  line-height: 1.6;
+}
+
+/* Detailed Scores */
+.detailed-scores {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  margin-bottom: 3rem;
+}
+
+.score-card {
+  background: white;
+  border: 2px solid #e5e7eb;
+  border-radius: 12px;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.score-details {
+  text-align: center;
+}
+
+.score-details p {
+  margin: 0;
+  color: #666;
+}
+
+.score-details strong {
+  color: #333;
+  font-size: 1.1rem;
+}
+
+/* Experience Section */
+.experience-section {
+  margin-bottom: 2rem;
+  padding: 1.5rem;
+  background: #f8f9ff;
+  border-radius: 12px;
+}
+
+.experience-section h3 {
+  margin: 0 0 1rem 0;
+  color: #333;
+}
+
+.experience-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.experience-info {
+  display: flex;
+  gap: 2rem;
+  color: #666;
+}
+
+.experience-badge {
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+.experience-badge.meets {
+  background: #d1fae5;
+  color: #065f46;
+}
+
+.experience-badge.below {
+  background: #fee2e2;
+  color: #991b1b;
+}
+
+/* Matches Section */
+.matches-section {
+  margin-bottom: 2rem;
+  padding: 1.5rem;
+  background: white;
+  border: 2px solid #e5e7eb;
+  border-radius: 12px;
+}
+
+.matches-section h3 {
+  margin: 0 0 1rem 0;
+  color: #333;
+  font-size: 1.1rem;
+}
+
+.skills-list, .keywords-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.skill-tag, .keyword-tag {
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 500;
+}
+
+.skill-tag.matched {
+  background: #d1fae5;
+  color: #065f46;
+}
+
+.skill-tag.missing {
+  background: #fee2e2;
+  color: #991b1b;
+}
+
+.keyword-tag {
+  background: #dbeafe;
+  color: #1e40af;
+}
+
+.keyword-tag.missing {
+  background: #fef3c7;
+  color: #92400e;
+}
+
+.tip {
+  margin: 1rem 0 0 0;
+  padding: 0.75rem;
+  background: #fffbeb;
+  border-left: 3px solid #f59e0b;
+  border-radius: 4px;
+  color: #92400e;
+  font-size: 0.9rem;
+}
+
+/* Action Buttons */
+.action-buttons {
+  text-align: center;
+  margin-top: 3rem;
+}
+
+.reset-btn {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border: none;
+  padding: 1rem 2.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+}
+
+.reset-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(102, 126, 234, 0.6);
+}
+
+.btn-icon {
+  font-size: 1.2rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .detailed-scores {
+    grid-template-columns: 1fr;
+  }
+
+  .overall-section {
+    padding: 1.5rem;
+  }
+
+  .experience-bar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .experience-info {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .score-header h2 {
+    font-size: 1.5rem;
+  }
+}
+
+/* Animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.score-display > * {
+  animation: fadeIn 0.5s ease-out;
+}
